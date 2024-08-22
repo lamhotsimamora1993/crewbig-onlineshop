@@ -1,0 +1,166 @@
+/* Reset dasar untuk menghapus margin dan padding default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Gaya dasar untuk body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Gaya untuk navbar */
+.navbar {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-menu li {
+  margin: 0;
+}
+
+.navbar-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 5px 10px;
+  transition: background-color 0.2s ease;
+}
+
+.navbar-menu a:hover {
+  background-color: #0056b3;
+  border-radius: 5px;
+}
+
+/* Gaya untuk header */
+header {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Gaya untuk main content */
+main {
+  padding: 20px;
+}
+
+/* Gaya untuk kontainer produk */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Gaya untuk setiap kartu produk */
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Efek hover pada kartu produk */
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* Gaya untuk gambar produk */
+.product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Gaya untuk konten produk */
+.product-content {
+  padding: 15px;
+}
+
+/* Gaya untuk judul produk */
+.product-title {
+  font-size: 1.2em;
+  margin: 0;
+  color: #333;
+}
+
+/* Gaya untuk deskripsi produk */
+.product-description {
+  font-size: 0.9em;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Gaya untuk harga produk */
+.product-price {
+  font-size: 1.1em;
+  color: #e60023;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Gaya untuk tombol beli */
+.product-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Efek hover pada tombol beli */
+.product-button:hover {
+  background-color: #0056b3;
+}
+
+/* Gaya untuk footer */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #007bff;
+  color: #fff;
+}

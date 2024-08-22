@@ -1,0 +1,46 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrewBig Online Shop</title>
+  <link rel="stylesheet" href="{% static "main.css" %}">
+</head>
+<body>
+   <!-- Navbar -->
+   <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-logo">CrewBig</a>
+      <ul class="navbar-menu">
+        <li><a href="./loginCustomer">Login</a></li>
+        <li><a href="../customerTransaction">Transactions</a></li>
+        <li><a href="./logoutCustomer">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header>
+    <h1>Daftar Products</h1>
+  </header>
+  
+  <main>
+    <section class="product-container">
+      {% for product in products %}
+      <div class="product-card">
+        <img src="{% static "/" %}{{product.image}}" width="150" height="150" alt="Product 1">
+        <div class="product-content">
+          <h2 class="product-title">{{product.name}}</h2>
+          <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac urna nec felis vestibulum.</p>
+          <p class="product-price">Rp {{product.price}}</p>
+          <a href="#" onclick="window.location.href='./cart/{{product.id}}'" class="product-button">Buy Now</a>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 CrewBig. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Transaction Details</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+</head> 
+<body>
+    <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl" href="../">Data Products</a>
+        </div>
+        <div class="flex-none gap-2">
+          <div class="form-control">
+            <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+          </div>
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="{% static "/image/foto.jpg" %}" />
+              </div>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+             
+              <li><a href="../daftarCustomer">Daftar</a></li>
+              <li><a href="../loginCustomer">Login</a></li>
+              <li><a href="../customerTransaction">Transaction</a></li>
+              <li><a href="../logoutCustomer">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <center>
+        {% for transaction_detail in transaction_details %}
+        <div class="card-side bg-base-100 w-96 shadow-xl">
+            
+            <div class="card-body">
+              <h2 class="card-title">
+                {{transaction_detail.name}} 
+              </h2>
+              <p>
+                <figure>
+                    <img
+                      src="{% static "/" %}{{transaction_detail.image}}"
+                      alt="" width="100" height="100"/>
+                  </figure>
+              </p>
+              <div class="card-actions justify-end">
+                Rp {{transaction_detail.price}}
+              </div>
+            </div>
+          </div> <br>
+          {% endfor %}
+      </center>
+
+      <center>
+      <strong>
+       Total Harga : Rp {{total}}
+      </strong>
+    </center>
+</body>
+</html>
